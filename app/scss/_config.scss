@@ -1,10 +1,11 @@
 // USER VARIABLES SECTION
 
-$accent: orange; // Accent Color
+$accent: #8C32F0; // Accent Color
 $fontsize: 16px; // Body Font Size
-$textcolor: #333; // Text Color
+$textcolor: #000; // Text Color
 $system: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
-$roboto: Roboto, sans-serif; // Roboto Font Family
+$avenir: 'Avenir', sans-serif;
+$gabriela: 'Gabriela', serif;
 
 // Bootstrap compatible gutter variable => $gutter
 $grid-gutter-width: 20px;
@@ -24,15 +25,39 @@ $gutter: $grid-gutter-width;
 		font-family: $fname;
 		font-style: $fstyle;
 		font-weight: $fweight;
-		// font-display: swap; // Uncomment to initially display system fonts
+		font-display: swap;
 		src: local($fname), url($furl) format('woff2');
 	}
 }
 
-@include font('Roboto', normal, 400, '../fonts/roboto-regular-webfont.woff2');
-@include font('Roboto', italic, 400, '../fonts/roboto-italic-webfont.woff2');
-@include font('Roboto', normal, 700, '../fonts/roboto-bold-webfont.woff2');
-@include font('Roboto', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2');
+@include font('Avenir', normal, 400, '../fonts/AvenirNext-Regular.woff2');
+@include font('Avenir', normal, 600, '../fonts/AvenirNext-DemiBold.woff2');
+@include font('Avenir', normal, 700, '../fonts/AvenirNext-Bold.woff2');
+@include font('Gabriela', normal, 400, '../fonts/Gabriela-Regular.woff2');
+
+@mixin gradientAnimation( $from, $start, $end, $transTime ){
+    background-size: 100%;
+    background-image: linear-gradient($from, $start, $end);
+    position: relative;
+    z-index: 100;
+    &:before {
+        background-image: linear-gradient($from, $end, $start);
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0; left: 0;
+        opacity: 0;
+        width: 100%;
+        z-index: -100;
+        transition: opacity $transTime;
+    }
+    &:hover {
+        &:before {
+            opacity: 1;
+        }
+    }
+}
 
 // GENERAL DOCUMENT STYLES
 
@@ -51,8 +76,25 @@ input, textarea {
 	&:required:valid { border-color: green }
 }
 
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.container-fluid{
+  max-width: 1470px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none !important;
+}
+
 body {
-	font-family: $roboto;
+	font-family: $avenir;
 	font-size: $fontsize;
 	min-width: 320px;
 	position: relative;
