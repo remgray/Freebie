@@ -22,6 +22,11 @@
           <img class="logo" src="images/src/logo.svg" alt="Freebie logo">
         </div>
         <nav class="header__menu">
+          <div class="burger">
+            <div class="burger-brick"></div>
+            <div class="burger-brick middle"></div>
+            <div class="burger-brick"></div>
+          </div>
           <ul class="menu__list">
             <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
             <li class="menu__item"><a class="menu__link" href="#">About</a></li>
@@ -164,8 +169,8 @@
           <div class="works__item item-1">
             <div class="works__image"></div>
             <div class="works__descr">
-              <a class="works__item-title">Brand Name</a>
-              <a class="works__item-subtitle">iOS | ANDROID | WEB DEVELOPMENT</a>
+              <a class="works__item-title" href="#">Brand Name</a>
+              <a class="works__item-subtitle" href="#">iOS | ANDROID | WEB DEVELOPMENT</a>
               <p class="works__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
               aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
@@ -173,8 +178,8 @@
           <div class="works__item item-2">
             <div class="works__image"></div>
             <div class="works__descr">
-              <a class="works__item-title">Brand Name</a>
-              <a class="works__item-subtitle">iOS | ANDROID | WEB DEVELOPMENT</a>
+              <a class="works__item-title" href="#">Brand Name</a>
+              <a class="works__item-subtitle" href="#">iOS | ANDROID | WEB DEVELOPMENT</a>
               <p class="works__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
               aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
@@ -182,8 +187,8 @@
           <div class="works__item item-3">
             <div class="works__image"></div>
             <div class="works__descr">
-              <a class="works__item-title">Brand Name</a>
-              <a class="works__item-subtitle">iOS | ANDROID | WEB DEVELOPMENT</a>
+              <a class="works__item-title" href="#">Brand Name</a>
+              <a class="works__item-subtitle" href="#" href="#">iOS | ANDROID | WEB DEVELOPMENT</a>
               <p class="works__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
               aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
@@ -191,8 +196,8 @@
           <div class="works__item item-4">
             <div class="works__image"></div>
             <div class="works__descr">
-              <a class="works__item-title">Brand Name</a>
-              <a class="works__item-subtitle">iOS | ANDROID | WEB DEVELOPMENT</a>
+              <a class="works__item-title" href="#">Brand Name</a>
+              <a class="works__item-subtitle" href="#">iOS | ANDROID | WEB DEVELOPMENT</a>
               <p class="works__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
               aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
@@ -204,10 +209,33 @@
       </div>
     </div>
   </section>
-
+  
+  <selector class="contact">
+    <div class="container">
+      <div class="contact__inner">
+        <div class="contact__text">
+          <div class="contact__text-subtitle">Questions, Comments, Concerns?</div>
+          <h3 class="contact__text-title">We’d love to <span class="highlight">hear</span> from you!</h3>
+        </div>
+        <div class="contact__form">
+          <form class="form__wrapper">
+            <label for="email">Your Email Address</label><br>
+            <input type="text" id="email" name="email" placeholder="something@website.com"><br>
+            <label for="sub">Subject</label><br>
+            <input type="text" id="sub" name="sub" placeholder="Question about your article">
+            <label for="message">Message</label><br>
+            <textarea id="message" name="message" placeholder="Your message starts with…"></textarea></textarea>
+            <button class="contact__btn btn" type="submit">Send a Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </selector>
 
   <footer class="footer">
-
+    <div class="container">
+      <div class="footer__rights">2020 © All rights reserved by Freebie</div>
+    </div>
   </footer>
 
   <script src="js/app.min.js"></script>
