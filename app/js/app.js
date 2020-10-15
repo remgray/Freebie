@@ -11,8 +11,18 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   const burger = document.querySelector('.burger');
+  const menu = document.querySelector('.menu__list');
+  menu.style.display = "none";
   burger.addEventListener('click', () => {
     burger.classList.toggle('open');
+    if (menu.style.display === "none") {
+      menu.style.display = "block";
+      menu.style.height = "auto";
+      menu.style.overflow = "auto";
+    } else {
+      menu.style.display = "none";
+    }
+    
   })
 
 });
