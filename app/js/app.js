@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
   const slider = document.querySelector('.swiper-container');
   var mySwiper = new Swiper(slider, {
@@ -8,6 +8,20 @@ document.addEventListener("DOMContentLoaded", function() {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10
+      },
+      751: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      1420: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      }
+    }
   });
 
   const burger = document.querySelector('.burger');
@@ -22,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
     } else {
       menu.style.display = "none";
     }
-    
+
   })
 
 });
