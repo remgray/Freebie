@@ -32,6 +32,7 @@
 .menu__list {
   display: flex;
   margin-top: 20px;
+  z-index: 999;
 }
 
 .menu__item + .menu__item {
@@ -154,6 +155,7 @@
     line-height: 97px;
   }
 }
+
 .btn {
   font-family: $avenir;
   font-weight: 600;
